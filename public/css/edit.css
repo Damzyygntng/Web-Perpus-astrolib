@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+.navbar {
+    background: #2f6fed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px; /* 🔥 tambah padding kanan kiri */
+    height: 100px;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+/* LOGO */
+.logo img {
+    height: 80%; /* ikut tinggi navbar, bukan nambah tinggi */
+    width: auto;
+    object-fit: contain;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* sebelumnya 25px */
+    margin-left: 20px;
+}
+
+.menu li {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.menu li a:hover {
+    opacity: 0.8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 20px; /* 🔥 ini yang bikin gak nempel kanan */
+}
+
+
+/* PROFILE */
+.user-avatar {
+    width: 32px; /* kecilin dikit */
+}
+/* PROFILE ICON */
+.nav-profile {
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 60px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.user-menu {
+  position: relative;
+}
+
+/* trigger */
+.user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-arrow {
+  font-size: 12px;
+}
+
+/* dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  z-index: 9999;
+}
+
+.user-header {
+  position: relative;
+  background: #3b6eea;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+/* avatar jadi posisi bebas */
+.user-header img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* nama */
+.user-header span {
+  font-weight: 500;
+}
+/* item */
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.user-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-item span {
+  color: #1E293B;
+}
+
+.user-item:hover {
+  background: #f5f7fb;
+}
+
+.user-item.logout span {
+  color: red;
+}
+
+.left {
+    text-align: center;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px; /* JARAK DARI FOTO KE TEKS */
+}
+
+/* Nama */
+.left h3 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* Email */
+.left p {
+    margin-top: 5px;
+    color: gray;
+    font-size: 14px;
+}
+
+/* MIDDLE */
+.middle {
+    width: 40%;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    position: relative; /* 🔥 penting */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.info img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0; /* biar ga ketarik kecil */
+}
+
+.info span {
+    font-size: 12px;
+    color: gray;
+}
+
+.btn-edit {
+    position: absolute;
+    top: 115px;
+    right: 290px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 9px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #2f6fed;
+    background: #ffffff;
+    color: #2f6fed;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-edit img {
+    width: 12px;
+}
+
+.btn-edit:hover {
+    background: #2f6fed;
+    color: white;
+}
+
+.btn-edit:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* RIGHT */
+.right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #eef2ff;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.box img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.profile-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f9fafc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.desc {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* PHOTO */
+.photo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.photo-section img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.photo-section small {
+    display: block;
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* INPUT */
+label {
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn-right {
+    text-align: right;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #2f6fed;
+    color: white;
+}
+
+.btn-cancel {
+    background: #e5e7eb;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #2f6fed;
+    background: transparent;
+    color: #2f6fed;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ICON */
+.btn-outline img {
+    width: 14px;
+    height: 14px;
+}
+
+/* OPTIONAL hover biar keren */
+.btn-outline:hover {
+    background: #2f6fed;
+    color: white;
+}
+
+.btn-outline:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* BACKGROUND GELAP */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.4);
+    display: none; /* default hidden */
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOX */
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+}
+
+/* UPLOAD AREA */
+.upload-box {
+    border: 2px dashed #2f6fed;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px 0;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-box img {
+    width: 30px;
+}
+
+.upload-box span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* BUTTON */
+.popup-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn-cancel {
+    background: #e5e7eb;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+.btn-primary {
+    background: #2f6fed;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+.toast {
+    position: fixed;
+    background: #DCFCE7;
+    color: #166534;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: slideIn 0.3s ease;
+   right: 800px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 35px; /* biar ga ketiban icon */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}

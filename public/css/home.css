@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 60px;
+  background: #2563EB;
+  color: white;
+  align-items: center;
+}
+
+.navbar nav a {
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Poppins-SemiBold", sans-serif;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  width: 275px;
+  position: absolute;
+  z-index: 1;
+}
+
+.user-menu {
+  position: relative;
+}
+
+/* trigger */
+.user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-arrow {
+  font-size: 12px;
+}
+
+/* dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  z-index: 9999;
+}
+
+.user-header {
+  position: relative;
+  background: #3b6eea;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+/* avatar jadi posisi bebas */
+.user-header img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* nama */
+.user-header span {
+  font-weight: 500;
+}
+/* item */
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.user-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-item span {
+  color: #1E293B;
+}
+
+.user-item:hover {
+  background: #f5f7fb;
+}
+
+.user-item.logout span {
+  color: red;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #2563EB;
+  padding: 50px 20px;
+  color: white;
+}
+
+/* CONTAINER */
+.hero-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* TEXT */
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 span {
+  color: #93C5FD;
+}
+
+.hero-text p {
+  font-size: 14px;
+  color: #dbeafe;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.hero-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #2d6cdf;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn, .btn-outline {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-btn:hover {
+  background: #e5edff;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 580px;
+  max-width: 100%;
+  position: absolute;
+   left: 850px;
+  top: 50px;
+}
+
+//* SECTION */
+.about {
+  padding: 60px 20px;
+  background: #f5f7fb;
+}
+
+/* CONTAINER BIAR KE TENGAH */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  gap: 40px;
+}
+
+/* TEXT */
+.about-text {
+  max-width: 420px;
+}
+
+.about-text h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CARD WRAPPER */
+.about-cards {
+  display: flex;
+  gap: 25px;
+}
+
+/* CARD BIAR LEBIH KELIATAN */
+.about-card {
+  width: 160px;
+  background: #eef3ff;
+  border-radius: 14px;
+  padding: 22px 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.about-card img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+.about-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.about-card p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* BOOK */
+.book-section {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.book-section h2 {
+  margin-bottom: 20px;
+}
+
+.book-section h4 {
+  color: #3B82F6;
+}
+
+.book-container {
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  width: 160px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-card h3 {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.book-card .author {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.book-card .rating {
+  font-size: 13px;
+  color: #f5a623;
+}
+
+/* SECTION */
+.cara-kerja {
+  padding: 60px 20px;
+  background: #f5f7fb;
+}
+
+/* CONTAINER */
+.cara-container {
+  max-width: 1100px;
+  margin: auto;
+  background: #dbeafe;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+/* TITLE */
+.cara-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+}
+
+/* CARD WRAPPER */
+.cara-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.cara-card {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* STEP NUMBER */
+.step {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+/* ICON */
+.cara-card img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.cara-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* TEXT */
+.cara-card p {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer {
+  background: #2563EB;
+  color: #fff;
+  padding-top: 50px;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* BATASIN AREA BIAR RAPI */
+.footer-brand {
+  max-width: 280px;
+}
+
+/* LOGO */
+.brand-logo img {
+  width: 130px;
+  height: auto;
+  margin-bottom: 8px;
+  top: 1550px;
+  position: absolute;
+  margin-bottom: 8px;
+}
+
+/* TEKS */
+.footer-brand p {
+  font-size: 14px;
+  color: #dbeafe;
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 30px;   /* kecilin jarak dari logo */
+  margin-bottom: 0;
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  margin-bottom: 10px;
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #E2E8F0;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+/* CONTACT ITEM */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* ICON */
+.contact-item img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.contact-item p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-flex;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.social-icons a:hover {
+  background: #374151;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ffffff;
+  padding: 15px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/* box */
+.popup-box {
+  background: #fff;
+  padding: 30px 24px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: popIn 0.2s ease;
+}
+
+/* icon */
+.popup-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* text */
+.popup-box h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.popup-box p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* buttons */
+.popup-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* batal */
+.cancel {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+/* logout merah */
+.confirm {
+  background: #e53935;
+  color: white;
+  border: none;
+}
+
+/* hover dikit */
+.cancel:hover {
+  background: #f5f5f5;
+}
+
+.confirm:hover {
+  background: #d32f2f;
+}
+
+/* animasi */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

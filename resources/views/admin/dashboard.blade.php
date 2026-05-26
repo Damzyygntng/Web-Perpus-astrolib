@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>AstroLib Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+ <div class="logo">
+    <img src="/gambar/AstroLib.png">
+  </div>
+
+  <ul class="menu">
+    <li class="active">
+  <a href="/dashboard-admin">
+    <img src="/gambar/home.png"> Dashboard
+  </a>
+</li>
+
+<li>
+  <a href="/kategori">
+    <img src="/gambar/kategori.png"> Kelola Kategori
+  </a>
+</li>
+
+<li>
+  <a href="/admin/kelola-buku">
+    <img src="/gambar/buku putih.png"> Kelola Buku
+  </a>
+</li>
+
+<li>
+  <a href="/kelolauser">
+    <img src="/gambar/user putih.png"> Kelola User
+  </a>
+</li>
+
+<li>
+  <a href="/kelolapeminjaman">
+    <img src="/gambar/book (1).png"> Peminjaman
+  </a>
+</li>
+
+<li>
+  <a href="/admin/pengembalian">
+    <img src="/gambar/trade.png"> Pengembalian
+  </a>
+</li>
+
+<li>
+  <a href="/kelolapetugas">
+    <img src="/gambar/pegawai.png"> Kelola Petugas
+  </a>
+</li>
+
+<li>
+  <a href="{{ url('/kelolaulasan') }}">
+    <img src="/gambar/cht.png"> Kelola Ulasan
+  </a>
+</li>
+  <li class="dropdown">
+  <div class="dropdown-toggle" id="dropdownBtn">
+    <img src="/gambar/staf.png"> 
+    Generate Laporan
+    <img src="/gambar/arrow biru.png" class="arrow">
+  </div>
+
+ <ul class="dropdown-menu" id="dropdownMenu">
+     <li><a href="/laporanbuku">Laporan Buku</a></li>
+    <li><a href="/laporanuser">Laporan user</a></li>
+    <li><a href="/laporanpetugas">Laporan Petugas</a></li>
+     <li><a href="/laporanpeminjaman">Laporan Peminjaman</a></li>
+    <li><a href="/laporanpengembalian">Laporan Pengembalian</a></li>
+  </ul>
+</li>
+
+  <div class="logout">
+    <li class="menu" onclick="openLogoutPopup()"><img src="/gambar/log out putih.png"> Log Out</li>
+  </div>
+</div>
+
+<div class="main">
+  <div class="header">Dashboard</div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="/gambar/buku.png">
+      <div>
+        <h4>Total Buku</h4>
+    <p>{{ $totalBuku }}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/gambar/buku.png">
+      <div>
+        <h4>Buku Dipinjam</h4>
+    <p>{{ $bukuDipinjam }}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/gambar/user.png">
+      <div>
+         <h4>Total User</h4>
+    <p>{{ $totalUser }}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/gambar/staf.png">
+      <div>
+        <h4>Total Petugas</h4>
+    <p>{{ $totalPetugas }}</p>
+      </div>
+    </div>
+
+    <div class="card center-card">
+      <img src="/gambar/cht biru.png">
+      <div>
+        <h4>Total Ulasan</h4>
+    <p>{{ $totalUlasan }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="logoutPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <!-- ICON -->
+    <img src="/gambar/logout.png" class="popup-icon">
+
+    <!-- TEXT -->
+    <h2>Konfirmasi Log Out</h2>
+    <p>Yakin ingin keluar?</p>
+
+    <!-- BUTTON -->
+    <div class="popup-actions">
+      <button class="btn cancel" onclick="closeLogoutPopup()">Batal</button>
+      <a href="login-admin" class="btn confirm">Log Out</a>
+    </div>
+
+  </div>
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #2f6fed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px; /* 🔥 tambah padding kanan kiri */
+    height: 100px;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+/* LOGO */
+.logo img {
+    height: 80%; /* ikut tinggi navbar, bukan nambah tinggi */
+    width: auto;
+    object-fit: contain;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* sebelumnya 25px */
+    margin-left: 20px;
+}
+
+.menu li {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Poppins-SemiBold", sans-serif;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.menu li a:hover {
+    opacity: 0.8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 20px; /* 🔥 ini yang bikin gak nempel kanan */
+}
+
+/* Container search */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Input */
+.search-box input {
+    padding: 10px 15px 10px 40px; /* kiri gede buat space icon */
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 14px;
+}
+
+/* Icon search */
+.search-icon {
+    position: absolute;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+/* PROFILE */
+.user-avatar {
+    width: 32px; /* kecilin dikit */
+}
+/* PROFILE ICON */
+.nav-profile {
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px 60px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.user-menu {
+  position: relative;
+}
+
+/* trigger */
+.user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-arrow {
+  font-size: 12px;
+}
+
+/* dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 260px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  z-index: 9999;
+}
+
+.user-header {
+  position: relative;
+  background: #3b6eea;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+/* avatar jadi posisi bebas */
+.user-header img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* nama */
+.user-header span {
+  font-weight: 500;
+}
+/* item */
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.user-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-item span {
+  color: #1E293B;
+}
+
+.user-item:hover {
+  background: #f5f7fb;
+}
+
+.user-item.logout span {
+  color: red;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.content {
+ display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 30px;
+  align-items: start;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2f6fed;
+    font-weight: bold;
+}
+
+.back:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.cover {
+ width: 280px;
+}
+
+/* COVER */
+.cover img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.details {
+  flex: 1;
+  max-width: 600px;
+}
+
+.details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.author {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.desc {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.info strong {
+    color: #333;
+}
+
+.info span {
+    color: #666;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    ddisplay: flex;
+  gap: 5px;
+}
+
+.primary {
+    background: #2f6fed;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.primary:hover {
+  background: #1d4ed8; /* lebih gelap dikit */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(47, 111, 237, 0.4);
+}
+
+.secondary {
+    background: #ddd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.secondary:hover {
+  background: #cfcfcf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.primary:active,
+.secondary:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* ====== CARD ULASAN ====== */
+.reviews {
+  width: 320px;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column; /* WAJIB: biar vertikal */
+  gap: 10px;
+  height: fit-content;
+  margin-top: 0;
+  position: absolute;
+  top: 200px; /* biar nempel atas dikit */
+  align-self: start;
+  grid-column: 3;
+  right: 90px;
+}
+
+/* TITLE */
+.reviews h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+/* ITEM */
+.review {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+
+  transition: all 0.2s ease;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+/* HOVER (AMAN, GA NGERUSAK) */
+.review:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* CONTENT */
+.review-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-header strong {
+  font-size: 14px;
+}
+
+/* STARS */
+.stars {
+  font-size: 12px;
+  color: #f5a623;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars span {
+  color: #666;
+  font-size: 12px;  
+}
+
+/* TEXT */
+.review p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.logout-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* box */
+.popup-box {
+  background: #fff;
+  padding: 30px 24px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: popIn 0.2s ease;
+}
+
+/* icon */
+.popup-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* text */
+.popup-box h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.popup-box p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* buttons */
+.popup-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* batal */
+.cancel {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+/* logout merah */
+.confirm {
+  background: #e53935;
+  color: white;
+  border: none;
+}
+
+/* hover dikit */
+.cancel:hover {
+  background: #f5f5f5;
+}
+
+.confirm:hover {
+  background: #d32f2f;
+}
+
+/* animasi */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.review-input{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.review-input form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rating-input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rating-input label{
+    font-weight: 600;
+}
+
+.rating-input select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.review-input textarea{
+    width: 100%;
+    height: 90px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+}
+
+.kirim-ulasan{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #356AF4;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.avatar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review{
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review-content{
+    flex: 1;
+}
+
+.review-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.review-header strong{
+    color: #111;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.review-content p{
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.stars{
+    color: #f5b301;
+    font-weight: 600;
+}
+
+.popup-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-success{
+    width: 500px;
+    background: #eef3fb;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.check-icon{
+    width: 90px;
+    height: 90px;
+    background: #39d86a;
+    color: white;
+    border-radius: 50%;
+    font-size: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.popup-success h2{
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.popup-success p{
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.popup-success button{
+    background: #2563eb;
+    border: none;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-popup{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
